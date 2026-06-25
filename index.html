@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
   <!-- Primary SEO -->
   <title>Astha Diagnostic & Consultation Center — Khulna's Trusted Healthcare</title>
@@ -15,6 +15,10 @@
   <meta property="og:description" content="Advanced diagnostics and specialist consultations in the heart of Khulna. Trusted by thousands of patients." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://asthadiagnostic.com" />
+
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#071d27" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230d7a8a'/><text x='50' y='62' font-size='44' font-family='sans-serif' fill='white' text-anchor='middle' font-weight='bold'>A</text><rect x='38' y='68' width='24' height='5' rx='2' fill='%2300e5b0'/></svg>" />
@@ -61,10 +65,13 @@
 </head>
 <body>
 
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
   <!-- =====================================================
        PRELOADER
        ===================================================== -->
-  <div class="preloader" id="preloader">
+  <div class="preloader" id="preloader" role="status" aria-label="Loading">
     <div class="preloader-inner">
       <div class="preloader-logo">
         <div class="preloader-cross">
@@ -103,7 +110,7 @@
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.1 19.79 19.79 0 0 1 1.61 4.52 2 2 0 0 1 3.59 2.34h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.73-1.73a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             +8801721804103
           </a>
-          <a href="https://www.facebook.com/people/Astha-diagnostic-and-consultion-senter/100076582106263/?mibextid=ZbWKwL" target="_blank" rel="noopener" class="top-bar-social">
+          <a href="https://www.facebook.com/people/Astha-diagnostic-and-consultion-senter/100076582106263/?mibextid=ZbWKwL" target="_blank" rel="noopener" class="top-bar-social" aria-label="Visit our Facebook page">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
             Facebook
           </a>
@@ -115,7 +122,7 @@
   <!-- =====================================================
        HEADER / NAVIGATION
        ===================================================== -->
-  <header class="site-header" id="site-header">
+  <header class="site-header" id="site-header" role="banner">
     <div class="container">
       <div class="header-inner">
 
@@ -172,15 +179,17 @@
 
   <!-- Mobile Nav Panel -->
   <div class="mobile-nav" id="mobile-nav" role="dialog" aria-label="Mobile navigation">
-    <a href="#about" class="mobile-nav-link" id="mob-about">About</a>
-    <a href="#services" class="mobile-nav-link" id="mob-services">Services</a>
-    <a href="#doctors" class="mobile-nav-link" id="mob-doctors">Doctors</a>
-    <a href="#packages" class="mobile-nav-link" id="mob-packages">Packages</a>
-    <a href="#gallery" class="mobile-nav-link" id="mob-gallery">Gallery</a>
-    <a href="#testimonials" class="mobile-nav-link" id="mob-reviews">Reviews</a>
-    <a href="#contact" class="mobile-nav-link" id="mob-contact">Contact</a>
-    <a href="#booking" class="btn btn-primary" id="mob-book" style="margin-top:16px">Book Appointment</a>
-    <a href="tel:+8801721804103" class="btn btn-ghost" id="mob-call" style="margin-top:10px">📞 +8801721804103</a>
+    <a href="#about" class="mobile-nav-link" id="mob-about"><span class="nav-icon">🏥</span> About</a>
+    <a href="#services" class="mobile-nav-link" id="mob-services"><span class="nav-icon">🔬</span> Services</a>
+    <a href="#doctors" class="mobile-nav-link" id="mob-doctors"><span class="nav-icon">👨‍⚕️</span> Doctors</a>
+    <a href="#packages" class="mobile-nav-link" id="mob-packages"><span class="nav-icon">📋</span> Packages</a>
+    <a href="#gallery" class="mobile-nav-link" id="mob-gallery"><span class="nav-icon">📸</span> Gallery</a>
+    <a href="#testimonials" class="mobile-nav-link" id="mob-reviews"><span class="nav-icon">⭐</span> Reviews</a>
+    <a href="#contact" class="mobile-nav-link" id="mob-contact"><span class="nav-icon">📍</span> Contact</a>
+    <div class="mobile-nav-cta">
+      <a href="#booking" class="btn btn-primary" id="mob-book">Book Appointment</a>
+      <a href="tel:+8801721804103" class="btn btn-ghost" id="mob-call">📞 +8801721804103</a>
+    </div>
   </div>
 
   <!-- =====================================================
@@ -240,7 +249,7 @@
         </div>
 
         <!-- Hero Visual -->
-        <div class="hero-visual">
+        <div class="hero-visual" id="hero-visual">
           <div class="hero-image-wrapper">
             <div class="hero-image-ring ring-1"></div>
             <div class="hero-image-ring ring-2"></div>
@@ -324,6 +333,13 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <!-- Wave Divider: Dark to Light -->
+  <div class="wave-divider" aria-hidden="true">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h1440v20c-240 25-480 40-720 40S240 45 0 20V0z" fill="#0c2d3d"/>
+    </svg>
   </div>
 
   <!-- =====================================================
@@ -596,6 +612,13 @@
     </div>
   </section>
 
+  <!-- Wave Divider: Light to Dark -->
+  <div class="wave-divider flip" aria-hidden="true">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 60h1440V40c-240-25-480-40-720-40S240 15 0 40v20z" fill="#071d27"/>
+    </svg>
+  </div>
+
   <!-- =====================================================
        HEALTH PACKAGES
        ===================================================== -->
@@ -701,6 +724,13 @@
     </div>
   </section>
 
+  <!-- Wave Divider: Dark to Light -->
+  <div class="wave-divider" aria-hidden="true">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h1440v20c-240 25-480 40-720 40S240 45 0 20V0z" fill="#071d27"/>
+    </svg>
+  </div>
+
   <!-- =====================================================
        WHY CHOOSE US
        ===================================================== -->
@@ -800,6 +830,13 @@
     </div>
   </section>
 
+  <!-- Wave Divider: Light to Dark -->
+  <div class="wave-divider flip" aria-hidden="true">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 60h1440V40c-240-25-480-40-720-40S240 15 0 40v20z" fill="#071d27"/>
+    </svg>
+  </div>
+
   <!-- =====================================================
        TESTIMONIALS
        ===================================================== -->
@@ -823,7 +860,7 @@
 
         <div class="testimonial-card reveal" id="review-1">
           <div class="testimonial-stars">★★★★★</div>
-          <p>"Astha Diagnostic Center is the best in Khulna! The staff is very friendly and the test results came the same day. Highly recommended for everyone."</p>
+          <p>Astha Diagnostic Center is the best in Khulna! The staff is very friendly and the test results came the same day. Highly recommended for everyone.</p>
           <div class="testimonial-author">
             <div class="author-avatar">RK</div>
             <div class="author-info">
@@ -836,7 +873,7 @@
 
         <div class="testimonial-card reveal reveal-delay-1" id="review-2">
           <div class="testimonial-stars">★★★★★</div>
-          <p>"Very professional service. The doctors here are experienced and the consultation was very helpful. The ultrasound was done quickly and accurately."</p>
+          <p>Very professional service. The doctors here are experienced and the consultation was very helpful. The ultrasound was done quickly and accurately.</p>
           <div class="testimonial-author">
             <div class="author-avatar">SB</div>
             <div class="author-info">
@@ -849,7 +886,7 @@
 
         <div class="testimonial-card reveal reveal-delay-2" id="review-3">
           <div class="testimonial-stars">★★★★☆</div>
-          <p>"Good diagnostic center with modern equipment. Blood test results were accurate and I got them the same day. The staff was courteous and helpful."</p>
+          <p>Good diagnostic center with modern equipment. Blood test results were accurate and I got them the same day. The staff was courteous and helpful.</p>
           <div class="testimonial-author">
             <div class="author-avatar">MH</div>
             <div class="author-info">
@@ -862,7 +899,7 @@
 
         <div class="testimonial-card reveal reveal-delay-3" id="review-4">
           <div class="testimonial-stars">★★★★★</div>
-          <p>"Excellent place for health check-ups. The pathology section is very well-maintained. Affordable prices and helpful doctors. Will definitely come again!"</p>
+          <p>Excellent place for health check-ups. The pathology section is very well-maintained. Affordable prices and helpful doctors. Will definitely come again!</p>
           <div class="testimonial-author">
             <div class="author-avatar">FA</div>
             <div class="author-info">
@@ -876,6 +913,13 @@
       </div>
     </div>
   </section>
+
+  <!-- Wave Divider: Dark to Light -->
+  <div class="wave-divider" aria-hidden="true">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h1440v20c-240 25-480 40-720 40S240 45 0 20V0z" fill="#071d27"/>
+    </svg>
+  </div>
 
   <!-- =====================================================
        BOOKING / APPOINTMENT
@@ -925,7 +969,7 @@
           <form class="booking-form" id="booking-form" novalidate>
             <div class="form-header">
               <h3>Quick Appointment Request</h3>
-              <p>Fill the form below and we'll contact you soon.</p>
+              <p>Fill the form below and we'll contact you to confirm your booking.</p>
             </div>
 
             <div class="form-row">
